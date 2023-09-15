@@ -1,0 +1,45 @@
+INFO: Starting training:
+        Epochs:          5
+        Batch size:      16
+        Learning rate:   0.001
+        Training size:   846
+        Validation size: 94
+        Checkpoints:     True
+        Device:          cpu
+        Images scaling:  0.5
+        Mixed Precision: True
+/usr/local/lib/python3.10/dist-packages/torch/cuda/amp/grad_scaler.py:120: UserWarning: torch.cuda.amp.GradScaler is enabled, but CUDA is not available.  Disabling.
+  warnings.warn("torch.cuda.amp.GradScaler is enabled, but CUDA is not available.  Disabling.")
+Epoch 1/5:   0% 0/846 [03:01<?, ?img/s]
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/Colab_Notebooks/STAGE/COCO_dataset/detect/train.py", line 212, in <module>
+    train_model(
+  File "/content/drive/MyDrive/Colab_Notebooks/STAGE/COCO_dataset/detect/train.py", line 101, in train_model
+    masks_pred = model(images)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/content/drive/MyDrive/Colab_Notebooks/STAGE/COCO_dataset/detect/unet/unet_model.py", line 28, in forward
+    x3 = self.down2(x2)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/content/drive/MyDrive/Colab_Notebooks/STAGE/COCO_dataset/detect/unet/unet_parts.py", line 39, in forward
+    return self.maxpool_conv(x)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/content/drive/MyDrive/Colab_Notebooks/STAGE/COCO_dataset/detect/unet/unet_parts.py", line 25, in forward
+    return self.double_conv(x)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt

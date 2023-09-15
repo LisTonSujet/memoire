@@ -1,0 +1,23 @@
+INFO: Starting training:
+        Epochs:          5
+        Batch size:      16
+        Learning rate:   0.0001
+        Training size:   846
+        Validation size: 94
+        Checkpoints:     True
+        Device:          cpu
+        Images scaling:  0.5
+        Mixed Precision: False
+Epoch 1/5:   0% 0/846 [00:55<?, ?img/s]
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/Colab_Notebooks/STAGE/COCO_dataset/detect/train.py", line 212, in <module>
+    train_model(
+  File "/content/drive/MyDrive/Colab_Notebooks/STAGE/COCO_dataset/detect/train.py", line 106, in train_model
+    loss = criterion(masks_pred, true_masks)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/loss.py", line 1174, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/functional.py", line 3029, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+IndexError: Target 5 is out of bounds.

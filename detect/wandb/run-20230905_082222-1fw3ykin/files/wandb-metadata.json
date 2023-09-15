@@ -1,0 +1,49 @@
+{
+    "os": "Linux-5.15.109+-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2023-09-05T08:22:24.037003",
+    "startedAt": "2023-09-05T08:22:22.538539",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--epochs",
+        "5",
+        "--batch-size",
+        "16",
+        "--learning-rate",
+        "1e-3",
+        "--amp"
+    ],
+    "state": "running",
+    "program": "/content/drive/MyDrive/Colab_Notebooks/STAGE/COCO_dataset/detect/train.py",
+    "codePath": "train.py",
+    "host": "6dad8cac7a03",
+    "username": "root",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 1,
+    "cpu_count_logical": 2,
+    "cpu_freq": {
+        "current": 2200.208,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2200.208,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.208,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 107.71508407592773,
+        "used": 26.445205688476562
+    },
+    "memory": {
+        "total": 12.67837905883789
+    }
+}
